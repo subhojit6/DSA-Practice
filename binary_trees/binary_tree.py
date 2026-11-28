@@ -1,6 +1,6 @@
 class TreeNode:
-    def __init__(self, value):
-        self.value = value
+    def __init__(self, val):
+        self.value = val
         self.left = None
         self.right = None
 
@@ -14,7 +14,7 @@ node.right = right_node
 def preorder(current):
     if current is None:
         return
-    print(current.value)
+    print(current.val)
     preorder(current.left)
     preorder(current.right)
 
@@ -22,7 +22,7 @@ def inorder(current):
     if current is None:
         return
     inorder(current.left)
-    print(current.value)
+    print(current.val)
     print(current.right)
 
 def postorder(current):
@@ -30,7 +30,8 @@ def postorder(current):
         return
     postorder(current.left)
     postorder(current.right)
-    print(current.value)
+    print(current.val)
+
 
 
 
